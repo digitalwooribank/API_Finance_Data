@@ -29,11 +29,11 @@ http://{host}:{port} | Host Address와 port |
 목록 및 상세정보 제공은 GET HTTP Method를 사용하며 수정은 PUT, PATCH를 사용하고 생성은 POST를 사용하고 삭제는 DELETE HTTP Method를 이용한다.
 
 HTTP Method | Action | 설명 | 비고
----- | ---- | ----
-GET | Read | 리소스 획득	
-PUT | Update/Modify | 리소스 변경	
-POST | Create/New | 리소스 생성	
-DELETE | Delete | 리소스 삭제	
+---- | ---- | ---- | ----
+GET | Read | 리소스 획득 | 
+PUT | Update/Modify | 리소스 변경 | 
+POST | Create/New | 리소스 생성 | 
+DELETE | Delete | 리소스 삭제 | 
 
 ※ 필요에 따라 HTTP Method는 변경될 수 있음.
 
