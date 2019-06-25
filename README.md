@@ -61,7 +61,7 @@ GET /oai/wb/v1/finance/getIndivAllAccInfo
 			"LST_TRN_DT": "20190524",
 			"XPR_DT": "20190524",
 			"ADNT_RGS_YN": "Y"
-		}
+		}]
 	}
 }
 ```
