@@ -120,7 +120,7 @@ Authorization: Bearer <Access Token>
 
 ##### 3.5 Response 데이터의 형태
 JSON Format인 경우 다음과 같다 JSON tag의 순서는 연동규격에 작성된 순서와 다를 수 있다.
-```json
+```
 {
     “dataHeader”: {
         …
