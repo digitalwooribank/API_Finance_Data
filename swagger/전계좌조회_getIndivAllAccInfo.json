@@ -1,0 +1,246 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "UNOAPI Swagger Spec. JSON",
+		"version": "1.0.0",
+		"title": "UNOAPI"
+	},
+	"host": "192.168.117.53:8090",
+	"basePath": "/",
+	"tags": [{
+		"name": "api-list",
+		"description": "List of APIs"
+	}],
+	"paths": {
+		"/oai/wb/v1/finance/getIndivAllAccInfo": {
+			"post": {
+				"tags": ["api-list"],
+				"summary": "개인계좌보유조회",
+				"operationId": "_oai_wb_v1_finance_getIndivAllAccInfo",
+				"consumes": ["application/json"],
+				"produces": ["application/json"],
+				"parameters": [{
+					"name": "appkey",
+					"in": "header",
+					"description": "제휴사키",
+					"required": false
+				},
+				{
+					"name": "token",
+					"in": "header",
+					"description": "인증토큰",
+					"required": false
+				},
+				{
+					"name": "itcsno",
+					"in": "header",
+					"description": "통합고객번호",
+					"required": false
+				},
+				{
+					"name": "ebnk_utzpe_no",
+					"in": "header",
+					"description": "전자뱅킹이용자번호",
+					"required": false
+				},
+				{
+					"in": "body",
+					"name": "REQUEST",
+					"description": "request body",
+					"required": true,
+					"schema": {
+						"$ref": "#/definitions/_oai_wb_v1_finance_getIndivAllAccInfo_REQUEST_ublumg8pkuox"
+					}
+				}],
+				"responses": {
+					"400": {
+						"description": "BAD_REQUEST"
+					},
+					"404": {
+						"description": "NOT_FOUND"
+					},
+					"405": {
+						"description": "METHOD_NOT_ALLOWED"
+					},
+					"500": {
+						"description": "INTERNAL_SERVER_ERROR"
+					},
+					"503": {
+						"description": "SERVICE_UNAVAILABLE"
+					},
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/_oai_wb_v1_finance_getIndivAllAccInfo_RESPONSE_1jezdelk69tme"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"_oai_wb_v1_finance_getIndivAllAccInfo_REQUEST_ublumg8pkuox": {
+			"type": "object",
+			"required": ["dataBody",
+			"dataHeader"],
+			"properties": {
+				"dataHeader": {
+					"description": "response data header",
+					"$ref": "#/definitions/_oai_wb_v1_finance_getIndivAllAccInfo_dataHeader_t4vquxjzvsja"
+				},
+				"dataBody": {
+					"description": "response data header",
+					"$ref": "#/definitions/_oai_wb_v1_finance_getIndivAllAccInfo_dataBody_1hbdqei2uaots"
+				}
+			}
+		},
+		"_oai_wb_v1_finance_getIndivAllAccInfo_dataHeader_t4vquxjzvsja": {
+			"type": "object",
+			"properties": {
+				"UTZPE_CNCT_IPAD": {
+					"type": "string",
+					"example": "",
+					"description": "이용자접속IP주소"
+				},
+				"UTZPE_CNCT_MCHR_UNQ_ID": {
+					"type": "string",
+					"example": "",
+					"description": "이용자접속기기고유ID"
+				},
+				"UTZPE_CNCT_TEL_NO_TXT": {
+					"type": "string",
+					"example": "",
+					"description": "이용자접속전화번호"
+				},
+				"UTZPE_CNCT_MCHR_IDF_SRNO": {
+					"type": "string",
+					"example": "",
+					"description": "이용자접속기기식별일련번호"
+				},
+				"UTZ_MCHR_OS_DSCD": {
+					"type": "string",
+					"example": "",
+					"description": "이용기기운영체계구분코드"
+				},
+				"UTZ_MCHR_OS_VER_NM": {
+					"type": "string",
+					"example": "",
+					"description": "이용기기운영체계버전명"
+				},
+				"UTZ_MCHR_MDL_NM": {
+					"type": "string",
+					"example": "",
+					"description": "이용기기모델명"
+				},
+				"UTZ_MCHR_APP_VER_NM": {
+					"type": "string",
+					"example": "",
+					"description": "앱 버전"
+				}
+			},
+			"description": "response data header"
+		},
+		"_oai_wb_v1_finance_getIndivAllAccInfo_dataBody_1hbdqei2uaots": {
+			"type": "object",
+			"description": "response data header"
+		},
+		"_oai_wb_v1_finance_getIndivAllAccInfo_RESPONSE_1jezdelk69tme": {
+			"type": "object",
+			"required": ["dataBody",
+			"dataHeader"],
+			"properties": {
+				"dataHeader": {
+					"description": "response data header",
+					"$ref": "#/definitions/_oai_wb_v1_finance_getIndivAllAccInfo_dataHeader_qxw4zxrs6khl"
+				},
+				"dataBody": {
+					"description": "response data header",
+					"$ref": "#/definitions/_oai_wb_v1_finance_getIndivAllAccInfo_dataBody_qxyur1bo0mlg"
+				}
+			}
+		},
+		"_oai_wb_v1_finance_getIndivAllAccInfo_dataHeader_qxw4zxrs6khl": {
+			"type": "object",
+			"description": "response data header"
+		},
+		"_oai_wb_v1_finance_getIndivAllAccInfo_dataBody_qxyur1bo0mlg": {
+			"type": "object",
+			"properties": {
+				"GRID_CNT": {
+					"type": "number",
+					"example": "",
+					"description": "계좌건수"
+				},
+				"GRID": {
+					"description": "계좌목록리스트",
+					"$ref": "#/definitions/_oai_wb_v1_finance_getIndivAllAccInfo_GRID_1jxzw5ws1zneb"
+				}
+			},
+			"description": "response data header"
+		},
+		"_oai_wb_v1_finance_getIndivAllAccInfo_GRID_1jxzw5ws1zneb": {
+			"type": "array",
+			"description": "계좌목록리스트",
+			"items": {
+				"description": "계좌목록리스트",
+				"$ref": "#/definitions/_oai_wb_v1_finance_getIndivAllAccInfo_GRID_s4xg2jb6vwbp"
+			}
+		},
+		"_oai_wb_v1_finance_getIndivAllAccInfo_GRID_s4xg2jb6vwbp": {
+			"type": "object",
+			"properties": {
+				"ACNO": {
+					"type": "string",
+					"example": "1002489404684",
+					"description": "계좌번호"
+				},
+				"PDCD": {
+					"type": "string",
+					"example": "0020000000000",
+					"description": "상품코드"
+				},
+				"PRD_NM": {
+					"type": "string",
+					"example": "저축예금",
+					"description": "상품명"
+				},
+				"CUCD": {
+					"type": "string",
+					"example": "KRW",
+					"description": "통화코드"
+				},
+				"PBOK_BAL": {
+					"type": "number",
+					"example":  "000000005014052.000",
+					"description": "통장잔액"
+				},
+				"WDR_AVL_AM": {
+					"type": "number",
+					"example": "000000000000000.000",
+					"description": "출금가능금액"
+				},
+				"NEW_DT": {
+					"type": "string",
+					"example": "20061002",
+					"description": "신규일자"
+				},
+				"LST_TRN_DT": {
+					"type": "string",
+					"example": "20190508",
+					"description": "최종거래일자"
+				},
+				"XPR_DT": {
+					"type": "string",
+					"example": "20190508",
+					"description": "만기일"
+				},
+				"ADNT_RGS_YN": {
+					"type": "string",
+					"example": "N",
+					"description": "사고등록여부"
+				}
+			},
+			"description": "계좌목록리스트"
+		}
+	}
+}

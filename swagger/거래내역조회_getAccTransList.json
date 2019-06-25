@@ -1,0 +1,273 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "UNOAPI Swagger Spec. JSON",
+    "version" : "1.0.0",
+    "title" : "UNOAPI"
+  },
+  "host" : "192.168.117.53:8090",
+  "basePath" : "/",
+  "tags" : [ {
+    "name" : "api-list",
+    "description" : "List of APIs"
+  } ],
+  "paths" : {
+    "/oai/wb/v1/finance/getAccTransList" : {
+      "post" : {
+        "tags" : [ "api-list" ],
+        "summary" : "계좌거래내역조회",
+        "operationId" : "_oai_wb_v1_finance_getAccTransList",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "appkey",
+          "in" : "header",
+          "description" : "제휴사키",
+          "required" : false
+        }, {
+          "name" : "token",
+          "in" : "header",
+          "description" : "인증토큰",
+          "required" : false
+        }, {
+          "name" : "itcsno",
+          "in" : "header",
+          "description" : "통합고객번호",
+          "required" : false
+        }, {
+          "name" : "ebnk_utzpe_no",
+          "in" : "header",
+          "description" : "전자뱅킹이용자번호",
+          "required" : false
+        }, {
+          "in" : "body",
+          "name" : "REQUEST",
+          "description" : "request body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/_oai_wb_v1_finance_getAccTransList_REQUEST_1iv4ass726mut"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "BAD_REQUEST"
+          },
+          "404" : {
+            "description" : "NOT_FOUND"
+          },
+          "405" : {
+            "description" : "METHOD_NOT_ALLOWED"
+          },
+          "500" : {
+            "description" : "INTERNAL_SERVER_ERROR"
+          },
+          "503" : {
+            "description" : "SERVICE_UNAVAILABLE"
+          },
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/_oai_wb_v1_finance_getAccTransList_RESPONSE_1h84txwpavtya"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "_oai_wb_v1_finance_getAccTransList_REQUEST_1iv4ass726mut" : {
+      "type" : "object",
+      "required" : [ "dataBody", "dataHeader" ],
+      "properties" : {
+        "dataHeader" : {
+          "description" : "response data header",
+          "$ref" : "#/definitions/_oai_wb_v1_finance_getAccTransList_dataHeader_1iv6lf6whrx43"
+        },
+        "dataBody" : {
+          "description" : "response data header",
+          "$ref" : "#/definitions/_oai_wb_v1_finance_getAccTransList_dataBody_s1dw40ry6cte"
+        }
+      }
+    },
+    "_oai_wb_v1_finance_getAccTransList_dataHeader_1iv6lf6whrx43" : {
+      "type" : "object",
+      "properties" : {
+        "UTZPE_CNCT_IPAD" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용자접속IP주소"
+        },
+        "UTZPE_CNCT_MCHR_UNQ_ID" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용자접속기기고유ID"
+        },
+        "UTZPE_CNCT_TEL_NO_TXT" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용자접속전화번호"
+        },
+        "UTZPE_CNCT_MCHR_IDF_SRNO" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용자접속기기식별일련번호"
+        },
+        "UTZ_MCHR_OS_DSCD" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용기기운영체계구분코드"
+        },
+        "UTZ_MCHR_OS_VER_NM" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용기기운영체계버전명"
+        },
+        "UTZ_MCHR_MDL_NM" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용기기모델명"
+        },
+        "UTZ_MCHR_APP_VER_NM" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "앱 버전"
+        }
+      },
+      "description" : "response data header"
+    },
+    "_oai_wb_v1_finance_getAccTransList_dataBody_s1dw40ry6cte" : {
+      "type" : "object",
+      "required" : [ "INQ_ACNO", "INQ_END_DT", "INQ_STA_DT" ],
+      "properties" : {
+        "INQ_ACNO" : {
+          "type" : "string",
+          "example" : "1087300116956",
+          "description" : "조회계좌번호"
+        },
+        "INQ_STA_DT" : {
+          "type" : "string",
+          "example" : "20181221",
+          "description" : "조회시작일자"
+        },
+        "INQ_END_DT" : {
+          "type" : "string",
+          "example" : "20190619",
+          "description" : "조회종료일자"
+        }
+      },
+      "description" : "response data header"
+    },
+    "_oai_wb_v1_finance_getAccTransList_RESPONSE_1h84txwpavtya" : {
+      "type" : "object",
+      "required" : [ "dataBody", "dataHeader" ],
+      "properties" : {
+        "dataHeader" : {
+          "description" : "response data header",
+          "$ref" : "#/definitions/_oai_wb_v1_finance_getAccTransList_dataHeader_1h84tjvka3eck"
+        },
+        "dataBody" : {
+          "description" : "response data header",
+          "$ref" : "#/definitions/_oai_wb_v1_finance_getAccTransList_dataBody_rh7qgqrdy44l"
+        }
+      }
+    },
+    "_oai_wb_v1_finance_getAccTransList_dataHeader_1h84tjvka3eck" : {
+      "type" : "object",
+      "description" : "response data header"
+    },
+    "_oai_wb_v1_finance_getAccTransList_dataBody_rh7qgqrdy44l" : {
+      "type" : "object",
+      "properties" : {
+        "GRID_CNT" : {
+          "type" : "number",
+          "example" : "000000000000000000",
+          "description" : "거래건수"
+        },
+        "GRID" : {
+          "description" : "거래내역리스트",
+          "$ref" : "#/definitions/_oai_wb_v1_finance_getAccTransList_GRID_1k25227nk2zxe"
+        }
+      },
+      "description" : "response data header"
+    },
+    "_oai_wb_v1_finance_getAccTransList_GRID_1k25227nk2zxe" : {
+      "type" : "array",
+      "description" : "거래내역리스트",
+      "items" : {
+        "description" : "거래내역리스트",
+        "$ref" : "#/definitions/_oai_wb_v1_finance_getAccTransList_GRID_t86x3b23zyw2"
+      }
+    },
+    "_oai_wb_v1_finance_getAccTransList_GRID_t86x3b23zyw2" : {
+      "type" : "object",
+      "properties" : {
+        "TRN_DT" : {
+          "type" : "string",
+          "example" : "20190611",
+          "description" : "거래일자"
+        },
+        "TRN_TM" : {
+          "type" : "string",
+          "example" : "174257",
+          "description" : "거래시각"
+        },
+        "CUCD" : {
+          "type" : "string",
+          "example" : "XAU",
+          "description" : "통화코드"
+        },
+        "PBOK_PRNG_OTLN_CD" : {
+          "type" : "string",
+          "example" : "0055",
+          "description" : "통장인자적요코드"
+        },
+        "DPS_RAP_KDCD" : {
+          "type" : "string",
+          "example" : "100",
+          "description" : "수신입지급종류코드"
+        },
+        "MD_KDCD" : {
+          "type" : "string",
+          "example" : "MIBMPSB2",
+          "description" : "매체종류코드"
+        },
+        "RCV_AM" : {
+          "type" : "number",
+          "example" : "000000000000002.000",
+          "description" : "입금금액"
+        },
+        "PAY_AM" : {
+          "type" : "number",
+          "example" : "000000000000000.000",
+          "description" : "출금금액"
+        },
+        "DPS_BAL" : {
+          "type" : "number",
+          "example" : "000000000000002.000",
+          "description" : "거래후잔액"
+        },
+        "TRN_TXT" : {
+          "type" : "string",
+          "example" : "1002601224974",
+          "description" : "거래메모"
+        },
+        "RQSPE_NM" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "거래처명"
+        },
+        "PID_SQ" : {
+          "type" : "number",
+          "example" : "000000",
+          "description" : "납입회차"
+        },
+        "TRN_STCD" : {
+          "type" : "string",
+          "example" : "1",
+          "description" : "거래상태코드"
+        }
+      },
+      "description" : "거래내역리스트"
+    }
+  }
+}
