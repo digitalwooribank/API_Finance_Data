@@ -20,6 +20,7 @@ http://{host}:{port} | Host Address와 port |
 /{directory} | Resource | /api/v1
 /{anyResource}?{Query} | {anyResource}: Logical resource
 {Query}: Parameter	 | 
+
 ※ 모든 데이터는 URL Encoding하여 전송해야 한다.
 
 ### Resource URL
