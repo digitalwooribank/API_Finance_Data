@@ -1,6 +1,6 @@
 # API_Finance_Data
 
-_20189 06월 25일 (Ver 1.0) update for Wooribank API_
+_2019년 06월 25일 (Ver 1.0) update for Wooribank API_
 
 > 금융데이터조회 API서비스 관련 설명서
 
@@ -118,26 +118,9 @@ Authorization: Bearer <Access Token>
 …
 ```
 
-##### 3.5 공통 Request 데이터 형태
-
-우리은행 오픈API 호출 시 다음의 필드를 추가하여 정보를 보내야 한다.
-Code	설명	필수
-여부	Type	비고
-dataHeader				
-	UTZPE_CNCT_IPAD	이용자접속IP주소	Y	S(39)	
-	UTZPE_CNCT_MCHR_UNQ_ID	이용자접속기기고유ID	Y	S(100)	
-	UTZPE_CNCT_TEL_NO_TXT	이용자접속전화번호	Y	S(40)	
-	UTZPE_CNCT_MCHR_IDF_SRNO	이용자접속기기식별일련번호	Y	S(20)	
-	UTZ_MCHR_OS_DSCD	이용기기운영체계구분코드	Y	S(1)	
-	UTZ_MCHR_OS_VER_NM	이용기기운영체계버전명	Y	S(20)	
-	UTZ_MCHR_MDL_NM	이용기기모델명	Y	S(20)	
-	UTZ_MCHR_APP_VER_NM	앱 버전	Y	S(20)	
-dataBody				
-	…				
-
-##### 3.6 Response 데이터의 형태
+##### 3.5 Response 데이터의 형태
 JSON Format인 경우 다음과 같다 JSON tag의 순서는 연동규격에 작성된 순서와 다를 수 있다.
-```
+```json
 {
     “dataHeader”: {
         …
