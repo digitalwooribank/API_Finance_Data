@@ -29,30 +29,9 @@ _20189 06월 25일 (Ver 1.0) update for Wooribank API_
 GET /oai/wb/v1/finance/getIndivAllAccInfo
 ```
 
+##### 2.2 Response Example 
 
-##### 2.2 Request Example 
-
-```
-{
-	"dataHeader": {
-		"UTZPE_CNCT_IPAD": "10.101.11.123",
-		"UTZPE_CNCT_MCHR_UNQ_ID": "3B5E6E7B",
-		"UTZPE_CNCT_TEL_NO_TXT": "01012341234",
-		"UTZPE_CNCT_MCHR_IDF_SRNO": "IMEI",
-		"UTZ_MCHR_OS_DSCD": "1",
-		"UTZ_MCHR_OS_VER_NM": "8.0.0",
-		"UTZ_MCHR_MDL_NM": "SM-G930S",
-		"UTZ_MCHR_APP_VER_NM": "1.0.0"
-	},
-	"dataBody": {
-		
-	}
-}
-```
-
-##### 2.3 Response Example 
-
-```
+```json
 {
 	"dataHeader": {
 		
