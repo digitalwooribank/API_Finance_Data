@@ -15,6 +15,7 @@
 ```
 
 항목 | 설명 | 비교
+---- | ---- | ----
 http://{host}:{port} | Host Address와 port | 	
 /{directory} | Resource | /api/v1
 /{anyResource}?{Query} | {anyResource}: Logical resource
