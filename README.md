@@ -71,7 +71,7 @@ JSON Format인 경우 다음과 같다 JSON tag의 순서는 연동규격에 작
     “dataHeader”: {
         …
     },
-“dataBody”: {
+    “dataBody”: {
         …
     },
 }
