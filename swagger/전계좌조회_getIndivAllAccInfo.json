@@ -168,7 +168,7 @@
 			"properties": {
 				"GRID_CNT": {
 					"type": "number",
-					"example": "",
+					"example": "1",
 					"description": "계좌건수"
 				},
 				"GRID": {
