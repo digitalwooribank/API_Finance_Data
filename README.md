@@ -1,4 +1,4 @@
-# API_Finance_Data
+# API_Finance_Data (금융데이터조회 API서비스)
 
 _2019년 06월 25일 (Ver 1.0) update for Wooribank API_
 
