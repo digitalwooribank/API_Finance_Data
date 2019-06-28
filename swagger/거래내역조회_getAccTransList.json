@@ -5,7 +5,7 @@
     "version" : "1.0.0",
     "title" : "UNOAPI"
   },
-  "host" : "192.168.117.53:8090",
+  "host" : "",
   "basePath" : "/",
   "tags" : [ {
     "name" : "api-list",
