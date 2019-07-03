@@ -71,7 +71,7 @@ GET /oai/wb/v1/finance/getIndivAllAccInfo
 
 ----------
 
-우리은행 오픈API 연동 방식은 REST(Representational State Transfer) 방식에 따라 구현한다. HTTP Method 및 리소스에 대한 URL에 따라 Request와 Response 데이터 타입은 JSOM을 사용한다.
+우리은행 오픈API 연동 방식은 REST(Representational State Transfer) 방식에 따라 구현한다. HTTP Method 및 리소스에 대한 URL에 따라 Request와 Response 데이터 타입은 JSON을 사용한다.
 또한 HTTP 1.1 Spec 규격을 따른다.
 
 ##### 3.1 Resource URL
