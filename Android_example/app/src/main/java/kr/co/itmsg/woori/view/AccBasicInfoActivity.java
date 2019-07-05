@@ -169,19 +169,18 @@ public class AccBasicInfoActivity extends AppCompatActivity {
                     }
                 }
                 catch (Exception e) {
-                    ErrorNotify(s + "\n" + e.getMessage());
+                    errorNotify(s + "\n" + e.getMessage());
                 }
             }
             else {
-                ErrorNotify(s);
+                errorNotify(s);
             }
         }
     }
 
 
 
-    private void ErrorNotify(String errorMessage)
-    {
+    private void errorNotify(String errorMessage) {
         String title = "통신장애";
         String message = "통신이 월활하지 않습니다. 다시 시도하여 주세요.";
 
