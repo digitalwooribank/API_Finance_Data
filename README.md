@@ -1,6 +1,6 @@
 # API_Finance_Data (금융데이터조회 API서비스)
 
-_2019년 06월 25일 (Ver 1.0) update for Wooribank API_
+_2021년 4월 21일 (Ver 0.3) update for Wooribank API_Hackathon
 
 > 금융데이터조회 API서비스 관련 설명서
 
@@ -26,44 +26,98 @@ _2019년 06월 25일 (Ver 1.0) update for Wooribank API_
 ##### 2.1 계좌 조회 HTTP Request
 
 ```
-GET /oai/wb/v1/finance/getIndivAllAccInfo
+POST /oai/wb/v1/finance/getIndivAllAccInfo
 ```
 
 ##### 2.2 Response Example 
 
 ```json
 {
-	"dataHeader": {
-		
-	},
+	"dataHeader": {},
 	"dataBody": {
-		"GRID_CNT": 2,
-		"GRID": [{
-			"ACNO": "1002146788200",
-			"PDCD": "0020590000000",
-			"PRD_NM": "우리급여 저축예금",
-			"CUCD": "KRW",
-			"PBOK_BAL": 71888,
-			"WDR_AVL_AM": 0,
-			"NEW_DT": "20120604",
-			"LST_TRN_DT": "20190612",
-			"XPR_DT": "20190612",
-			"ADNT_RGS_YN": "N"
+	  "GRID_CNT": "6",
+	  "GRID": [
+		{
+		  "ACNO": "10028183*****",
+		  "ACCT_KND": "P",
+		  "PRD_NM": "WON 통장",
+		  "CUCD": "KRW",
+		  "PBOK_BAL": "3014050.000",
+		  "FAXC_BAL": "0.000",
+		  "NEW_DT": "2021-02-15",
+		  "XPR_DT": "2022-02-15",
+		  "ADNT_RGS_YN": "Y",
+		  "PSKL_ACT_YN": "Y",
+		  "ACT_STCD": "A"
 		},
 		{
-			"ACNO": "1002160010529",
-			"PDCD": "0021650000000",
-			"PRD_NM": "우리꿈 저축예금",
-			"CUCD": "KRW",
-			"PBOK_BAL": 0,
-			"WDR_AVL_AM": 0,
-			"NEW_DT": "20190524",
-			"LST_TRN_DT": "20190524",
-			"XPR_DT": "20190524",
-			"ADNT_RGS_YN": "Y"
-		}]
+		  "ACNO": "10028466*****",
+		  "ACCT_KND": "P",
+		  "PRD_NM": "위비모바일통장",
+		  "CUCD": "KRW",
+		  "PBOK_BAL": "98012200.000",
+		  "FAXC_BAL": "0.000",
+		  "NEW_DT": "2021-03-07",
+		  "XPR_DT": "2022-02-25",
+		  "ADNT_RGS_YN": "N",
+		  "PSKL_ACT_YN": "N",
+		  "ACT_STCD": "D"
+		},
+		{
+		  "ACNO": "10028613*****",
+		  "ACCT_KND": "P",
+		  "PRD_NM": "스무살우리 통장",
+		  "CUCD": "KRW",
+		  "PBOK_BAL": "558900.000",
+		  "FAXC_BAL": "0.000",
+		  "NEW_DT": "2020-04-06",
+		  "XPR_DT": "2022-03-07",
+		  "ADNT_RGS_YN": "N",
+		  "PSKL_ACT_YN": "Y",
+		  "ACT_STCD": "A"
+		},
+		{
+		  "ACNO": "10404702*****",
+		  "ACCT_KND": "J",
+		  "PRD_NM": "우리 Magic6 적금",
+		  "CUCD": "KRW",
+		  "PBOK_BAL": "060000.000",
+		  "FAXC_BAL": "0.000",
+		  "NEW_DT": "2020-10-23",
+		  "XPR_DT": "2021-10-23",
+		  "ADNT_RGS_YN": "N",
+		  "PSKL_ACT_YN": "N",
+		  "ACT_STCD": "D"
+		},
+		{
+		  "ACNO": "10739309*****",
+		  "ACCT_KND": "U",
+		  "PRD_NM": "주택청약종합저축",
+		  "CUCD": "KRW",
+		  "PBOK_BAL": "5190000.000",
+		  "FAXC_BAL": "0.000",
+		  "NEW_DT": "2020-10-23",
+		  "XPR_DT": "2048-09-06",
+		  "ADNT_RGS_YN": "N",
+		  "PSKL_ACT_YN": "Y",
+		  "ACT_STCD": "C"
+		},
+		{
+		  "ACNO": "120454*******",
+		  "ACCT_KND": "L",
+		  "PRD_NM": "가계적금관계대출",
+		  "CUCD": "KRW",
+		  "PBOK_BAL": "4000000.000",
+		  "FAXC_BAL": "0.000",
+		  "NEW_DT": "2021-04-01",
+		  "XPR_DT": "2021-06-20",
+		  "ADNT_RGS_YN": "",
+		  "PSKL_ACT_YN": "N",
+		  "ACT_STCD": "C"
+		}
+	  ]
 	}
-}
+  }
 ```
 
 
@@ -71,7 +125,7 @@ GET /oai/wb/v1/finance/getIndivAllAccInfo
 
 ----------
 
-우리은행 오픈API 연동 방식은 REST(Representational State Transfer) 방식에 따라 구현한다. HTTP Method 및 리소스에 대한 URL에 따라 Request와 Response 데이터 타입은 JSOM을 사용한다.
+우리은행 오픈API 연동 방식은 REST(Representational State Transfer) 방식에 따라 구현한다. HTTP Method 및 리소스에 대한 URL에 따라 Request와 Response 데이터 타입은 JSON을 사용한다.
 또한 HTTP 1.1 Spec 규격을 따른다.
 
 ##### 3.1 Resource URL
@@ -115,6 +169,7 @@ GET /oap/wb/v2/oauth/tokencheck HTTP/1.1
 Content-Type: Applicatin/x-www-form-urlencoded
 appKey: <APP Key>
 Authorization: Bearer <Access Token>
+hashVAL: <JSON Data Hash Value>
 …
 ```
 
