@@ -23,7 +23,7 @@ _2021년 4월 21일 (Ver 0.3) update for Wooribank API_Hackathon
 
 ----------
 
-##### 2.1 계좌 조회 HTTP Request
+##### 2.1 전계좌 조회 HTTP Request
 
 ```
 POST /oai/wb/v1/finance/getIndivAllAccInfo
