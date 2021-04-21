@@ -1,21 +1,21 @@
 {
 	"swagger": "2.0",
 	"info": {
-		"description": "UNOAPI Swagger Spec. JSON",
+		"description" : "Wooribank API, Wooribank Swagger Spec. JSON",
 		"version": "1.0.0",
-		"title": "UNOAPI"
+		"title" : "Wooribank API"
 	},
-	"host": "",
+	"host": "localhost:8080",
 	"basePath": "/",
 	"tags": [{
-		"name": "api-list",
-		"description": "List of APIs"
+		"name": "List of APIs",
+		"description": ""
 	}],
 	"paths": {
 		"/oai/wb/v1/finance/getAccBasicInfo": {
 			"post": {
-				"tags": ["api-list"],
-				"summary": "계좌기본정보조회",
+				"tags": ["List of APIs"],
+				"summary": "계좌기본조회",
 				"operationId": "_oai_wb_v1_finance_getAccBasicInfo",
 				"consumes": ["application/json"],
 				"produces": ["application/json"],
@@ -23,24 +23,14 @@
 					"name": "appkey",
 					"in": "header",
 					"description": "제휴사키",
+					"type" : "string",
 					"required": false
 				},
 				{
 					"name": "token",
 					"in": "header",
 					"description": "인증토큰",
-					"required": false
-				},
-				{
-					"name": "itcsno",
-					"in": "header",
-					"description": "통합고객번호",
-					"required": false
-				},
-				{
-					"name": "ebnk_utzpe_no",
-					"in": "header",
-					"description": "전자뱅킹이용자번호",
+					"type" : "string",
 					"required": false
 				},
 				{
@@ -147,13 +137,23 @@
 			"properties": {
 				"INQ_ACNO": {
 					"type": "string",
-					"example": "1081301002227",
+					"example": "1002123456789",
 					"description": "조회계좌번호"
 				},
 				"INQ_BAS_DT": {
 					"type": "string",
-					"example": "20190627",
+					"example": "20210220",
 					"description": "조회기준일자"
+				},
+				"ACCT_KND": {
+					"type": "string",
+					"example": "P",
+					"description": "계좌구분"
+				},
+				"INQ_CUCD": {
+					"type": "string",
+					"example": "KRW",
+					"description": "통화코드"
 				}
 			},
 			"description": "response data header"
@@ -182,7 +182,7 @@
 			"properties": {
 				"ACNO": {
 					"type": "string",
-					"example": "1081301002227",
+					"example": "1002123456789",
 					"description": "계좌번호"
 				},
 				"ACT_STS": {
