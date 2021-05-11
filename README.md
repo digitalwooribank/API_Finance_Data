@@ -177,10 +177,10 @@ hashVAL: <JSON Data Hash Value>
 JSON Format인 경우 다음과 같다 JSON tag의 순서는 연동규격에 작성된 순서와 다를 수 있다.
 ```
 {
-    “dataHeader”: {
+    "dataHeader": {
         …
     },
-    “dataBody”: {
+    "dataBody": {
         …
     },
 }
